@@ -1,10 +1,5 @@
-.. Gulliver documentation master file, created by
-   sphinx-quickstart on Fri Dec 21 20:54:11 2018.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-Welcome to Gulliver's documentation!
-====================================
+Gulliver
+========
 
 .. toctree::
    :maxdepth: 2
