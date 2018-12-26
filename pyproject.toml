@@ -56,7 +56,7 @@ deps =
     sphinx
     sphinx_rtd_theme
 commands =
-    sphinx-build -b html -d _build/doctrees/ ./ _build/html/
+    sphinx-build -b html -d build/doctrees/ ./ build/html/
 """
 
 [build-system]
