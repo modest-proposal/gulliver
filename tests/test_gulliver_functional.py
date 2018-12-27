@@ -1,6 +1,8 @@
 import webtest
 from pytest import fixture
 
+from http.server import HTTPStatus
+
 from gulliver import create_app
 
 
@@ -11,5 +13,5 @@ def app():
 
 
 def test_get_home(app):
-    response = app.get("/", status=200)
+    response = app.get("/", status=HTTPStatus.OK)
     assert b"<h1>Gulliver" in response.body
