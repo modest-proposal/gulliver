@@ -4,6 +4,8 @@ from typing import Mapping
 
 import pyramid.router
 
+__version__ = ...  # type: str
+
 def create_app(
     global_config: Mapping, **settings
 ) -> pyramid.router.Router: ...

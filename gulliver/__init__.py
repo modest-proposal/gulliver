@@ -1,6 +1,6 @@
 """Initialization of the app."""
 
-__version__ = "0.1.0"
+__version__ = "0.1.0"  # sig: str
 
 from pyramid.config import Configurator
 
