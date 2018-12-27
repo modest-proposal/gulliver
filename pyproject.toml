@@ -25,6 +25,7 @@ flake8-isort = "^2.6"
 flake8-docstrings = "^1.3"
 sphinx = "^1.8"
 sphinx_rtd_theme = "^0.4.2"
+pygenstub = "^1.2"
 
 [tool.poetry.plugins."paste.app_factory"]
 "main" = "gulliver:create_app"
