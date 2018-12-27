@@ -8,6 +8,7 @@ from gulliver import create_app
 
 @fixture(scope="module")
 def app():
+    """A Gulliver application instance for testing."""
     app_ = create_app({})
     return webtest.TestApp(app_)
 
