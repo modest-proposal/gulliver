@@ -40,6 +40,7 @@ release = '0.1.0'
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
+    'pygenstub',
     'sphinx.ext.githubpages',
 ]
 
@@ -70,6 +71,8 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = None
 
+# A list of ignored prefixes for module index sorting.
+modindex_common_prefix = ["gulliver."]
 
 # -- Options for HTML output -------------------------------------------------
 
