@@ -1,5 +1,8 @@
 *.pyc
 *.egg-info
-build/
-.tox/
-.idea/
+__pycache__
+.pytest_cache
+build
+.buildinfo
+.tox
+.idea
