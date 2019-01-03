@@ -12,7 +12,7 @@ documentation = "https://modest-proposal.github.io/gulliver/"
 repository = "https://github.com/modest-proposal/gulliver"
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^3.5"
 pyramid = "^1.10"
 pyramid_chameleon = "^0.3"
 
@@ -36,7 +36,7 @@ line-length = 96
 [tool.tox]
 legacy_tox_ini = """
 [tox]
-envlist = py37, py36, style, docs
+envlist = py{37,36}, pypy3, style, docs
 skipsdist = True
 
 [testenv]
