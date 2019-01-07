@@ -33,8 +33,11 @@ def create_app(global_config, **settings):
     :param settings: Extra settings to pass to the configurator.
     :return: Created application.
     """
+    settings["tm.manager_hook"] = "pyramid_tm.explicit_manager"
     with Configurator(settings=settings) as config:
         config.include("pyramid_chameleon")
+        config.include("pyramid_tm")
+        config.include("pyramid_zodbconn")
         config.set_root_factory(get_root)
         config.scan(".views")
         return config.make_wsgi_app()

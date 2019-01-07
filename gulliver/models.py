@@ -17,7 +17,11 @@
 """Data models of the application."""
 
 
-class Root(dict):
+from newt.db import BTree
+from pyramid_zodbconn import get_connection
+
+
+class Root(BTree):
     """Root of the application."""
 
 
@@ -28,4 +32,8 @@ def get_root(request):
     :param request: Request to respond to.
     :return: Application root.
     """
-    return Root()
+    connection = get_connection(request)
+    zodb_root = connection.root()
+    if "app_root" not in zodb_root:
+        zodb_root["app_root"] = Root()
+    return zodb_root["app_root"]
