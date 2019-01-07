@@ -14,27 +14,18 @@
 # along with Gulliver.  If not, see <http://www.gnu.org/licenses/>.
 
 
-"""Initialization of the application."""
+"""Data models of the application."""
 
 
-__version__ = "0.1.0"  # sig: str
+class Root(dict):
+    """Root of the application."""
 
 
-from pyramid.config import Configurator
+def get_root(request):
+    """Get the root object of the application.
 
-from .models import get_root
-
-
-def create_app(global_config, **settings):
-    """Create a Gulliver app.
-
-    :sig: (Mapping) -> pyramid.router.Router
-    :param global_config: Global configuration settings.
-    :param settings: Extra settings to pass to the configurator.
-    :return: Created application.
+    :sig: (pyramid.request.Request) -> Root
+    :param request: Request to respond to.
+    :return: Application root.
     """
-    with Configurator(settings=settings) as config:
-        config.include("pyramid_chameleon")
-        config.set_root_factory(get_root)
-        config.scan(".views")
-        return config.make_wsgi_app()
+    return Root()

@@ -14,16 +14,18 @@
 # along with Gulliver.  If not, see <http://www.gnu.org/licenses/>.
 
 
-"""Handlers for the HTTP requests to the endpoints of the app."""
+"""Handlers for the HTTP requests to the endpoints of the application."""
 
 from pyramid.view import view_config
+
+from .models import Root
 
 
 # sigalias: Request = pyramid.request.Request
 
 
-@view_config(name="", renderer="templates/home.pt")
-def home(request):
+@view_config(context=Root, renderer="templates/home.pt")
+def view_root(request):
     """Respond to a request to the root.
 
     :sig: (Request) -> Dict

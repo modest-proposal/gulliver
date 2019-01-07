@@ -11,5 +11,5 @@ def test_version():
 
 def test_get_home_should_contain_page_title():
     request = DummyRequest()
-    response = views.home(request)
+    response = views.view_root(request)
     assert response.get("page_title") == "Gulliver"
