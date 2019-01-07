@@ -37,6 +37,7 @@ def create_app(global_config, **settings):
     with Configurator(settings=settings) as config:
         config.include("pyramid_chameleon")
         config.include("pyramid_tm")
+        config.include("pyramid_retry")
         config.include("pyramid_zodbconn")
         config.set_root_factory(get_root)
         config.scan(".views")

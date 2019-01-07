@@ -449,6 +449,18 @@ pyramid = "*"
 
 [[package]]
 category = "main"
+description = "An execution policy for Pyramid that supports retrying requests after certain failure exceptions."
+name = "pyramid-retry"
+optional = false
+python-versions = "*"
+version = "1.0"
+
+[package.dependencies]
+pyramid = ">=1.9"
+"zope.interface" = "*"
+
+[[package]]
+category = "main"
 description = "A package which allows Pyramid requests to join the active transaction"
 name = "pyramid-tm"
 optional = false
@@ -788,7 +800,7 @@ version = "4.6.0"
 setuptools = "*"
 
 [metadata]
-content-hash = "a4e233ff3e94041481a57b5efc453fb5dfb01ec4d214deb110f142afc1a9c7d1"
+content-hash = "418c1c05058d67c00c5b667b9145bcc3676b9052d99b54199e2b2f6e1e8e0f58"
 python-versions = "^3.6"
 
 [metadata.hashes]
@@ -837,6 +849,7 @@ pygments = ["5ffada19f6203563680669ee7f53b64dabbeb100eb51b61996085e99c03b284a", 
 pyparsing = ["40856e74d4987de5d01761a22d1621ae1c7f8774585acae358aa5c5936c6c90b", "f353aab21fd474459d97b709e527b5571314ee5f067441dc9f88e33eecd96592"]
 pyramid = ["37c3e1c9eae72817e0365e2a38143543aee8b75240701fa5cb3a1be86c01a1c0", "3d5a6165854237b41ac67ced7697d8a884ab2b97625fabfa41b9e53d91187698"]
 pyramid-chameleon = ["d176792a50eb015d7865b44bd9b24a7bd0489fa9a5cebbd17b9e05048cef9017"]
+pyramid-retry = ["7053f2345b2676f9b9031605a6764169963dad2f73e26873ce9331f86c78db46", "7ad3b813df3c5c903bb1e2c4075266b52295ce32e614ba8c15c656c07c503923"]
 pyramid-tm = ["7e374c0b774d4a5c83b04fe4c195a601c7219023cf4944a8e4251a86b7e288da", "fde97db9d92039a154ca6afffdd2485874c7d3e7a6432adb51b7a60810bad422"]
 pyramid-zodbconn = ["15c5174aee224d81bd032241a2ad1f633ffcabaedd6f1ad5ba2c3fcacdf57047", "52540a82a88a3484896f580db240a096b144d06cf91a7fb90dc7726162440692"]
 pytest = ["3f193df1cfe1d1609d4c583838bea3d532b18d6160fd3f55c9447fdca30848ec", "e246cf173c01169b9617fc07264b7b1316e78d7a650055235d6d897bc80d9660"]
