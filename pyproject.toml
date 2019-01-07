@@ -5,7 +5,7 @@ description = ""
 readme = "README.rst"
 
 authors = ["H. Turgut Uyar <uyar@tekir.org>", "Barbaros Günay"]
-license = "GPL-3.0"
+license = "GPL-3.0+"
 
 url = "https://modest-proposal.github.io/gulliver/"
 documentation = "https://modest-proposal.github.io/gulliver/"
