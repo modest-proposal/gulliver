@@ -4,6 +4,4 @@ from typing import Dict
 
 import pyramid.request
 
-Request = pyramid.request.Request
-
-def view_root(request: Request) -> Dict: ...
+def view_root(request: pyramid.request.Request) -> Dict: ...

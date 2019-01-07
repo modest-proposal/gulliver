@@ -21,15 +21,12 @@ from pyramid.view import view_config
 from .models import Root
 
 
-# sigalias: Request = pyramid.request.Request
-
-
 @view_config(context=Root, renderer="templates/home.pt")
 def view_root(request):
     """Respond to a request to the root.
 
-    :sig: (Request) -> Dict
-    :param request: Incoming HTTP request.
+    :sig: (pyramid.request.Request) -> Dict
+    :param request: Request to respond to.
     :return: Page data.
     """
     page_title = "Gulliver"
