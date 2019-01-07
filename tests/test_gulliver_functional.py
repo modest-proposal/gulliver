@@ -1,14 +1,14 @@
 import webtest
 from pytest import fixture
 
-import os
 from configparser import ConfigParser
 from http.server import HTTPStatus
+from pathlib import Path
 
 from gulliver import create_app
 
 
-_CONFIG_FILE = os.path.join(os.path.dirname(__file__), "testing.ini")
+_CONFIG_FILE = Path(__file__).parent / "testing.ini"
 
 
 @fixture(scope="module")
