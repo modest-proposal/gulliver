@@ -26,7 +26,7 @@ from .models import get_root
 
 
 def create_app(global_config, **settings):
-    """Create a Gulliver app.
+    """Create an application.
 
     :sig: (Mapping) -> pyramid.router.Router
     :param global_config: Global configuration settings.
