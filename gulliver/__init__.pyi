@@ -2,10 +2,13 @@
 
 from typing import Mapping
 
+import gulliver.models
+import pyramid.request
 import pyramid.router
 
 __version__ = ...  # type: str
 
+def get_root(request: pyramid.request.Request) -> gulliver.models.Root: ...
 def create_app(
     global_config: Mapping, **settings
 ) -> pyramid.router.Router: ...

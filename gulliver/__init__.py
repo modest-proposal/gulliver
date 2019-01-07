@@ -21,8 +21,21 @@ __version__ = "0.1.0"  # sig: str
 
 
 from pyramid.config import Configurator
+from pyramid_zodbconn import get_connection
 
-from .models import get_root
+from .models import get_app_root
+
+
+def get_root(request):
+    """Get the model root of the application.
+
+    :sig: (pyramid.request.Request) -> gulliver.models.Root
+    :param request: Request to respond to.
+    :return: Application root.
+    """
+    connection = get_connection(request)
+    db_root = connection.root()
+    return get_app_root(db_root)
 
 
 def create_app(global_config, **settings):

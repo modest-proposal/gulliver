@@ -2,7 +2,7 @@
 
 from newt.db import BTree
 
-import pyramid.request
+import persistent.mapping
 
 class Root(BTree): ...
-def get_root(request: pyramid.request.Request) -> Root: ...
+def get_app_root(db_root: persistent.mapping.PersistentMapping) -> Root: ...

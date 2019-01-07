@@ -18,22 +18,21 @@
 
 
 from newt.db import BTree
-from pyramid_zodbconn import get_connection
 
 
 class Root(BTree):
     """Root of the application."""
 
 
-def get_root(request):
-    """Get the root object of the application.
+def get_app_root(db_root):
+    """Get the root of the application's data model.
 
-    :sig: (pyramid.request.Request) -> Root
-    :param request: Request to respond to.
-    :return: Application root.
+    :sig: (persistent.mapping.PersistentMapping) -> Root
+    :param db_root: Root of the database connection.
+    :return: Root model.
     """
-    connection = get_connection(request)
-    zodb_root = connection.root()
-    if "app_root" not in zodb_root:
-        zodb_root["app_root"] = Root()
-    return zodb_root["app_root"]
+    app_root = db_root.get("app_root")
+    if app_root is None:
+        app_root = Root()
+        db_root["app_root"] = app_root
+    return app_root
