@@ -160,6 +160,14 @@ version = "1.0.2"
 flake8 = "*"
 
 [[package]]
+category = "dev"
+description = "WSGI HTTP Server for UNIX"
+name = "gunicorn"
+optional = false
+python-versions = ">=2.6, !=3.0.*, !=3.1.*"
+version = "19.9.0"
+
+[[package]]
 category = "main"
 description = "Integrated process monitor for developing and reloading daemons."
 name = "hupper"
@@ -787,7 +795,7 @@ version = "4.6.0"
 setuptools = "*"
 
 [metadata]
-content-hash = "7c1624cc6e39a0d0d52fb6026f05c6ee59a3b554f410e4517f7382d3335ccb61"
+content-hash = "723a91200d5184f4c62efbf5f4f7809f951d61d6cceaaf2292e1b846ae22bdfc"
 python-versions = "^3.6"
 
 [metadata.hashes]
@@ -807,6 +815,7 @@ flake8 = ["6a35f5b8761f45c5513e3405f110a86bea57982c3b75b766ce7b65217abe1670", "c
 flake8-docstrings = ["4e0ce1476b64e6291520e5570cf12b05016dd4e8ae454b8a8a9a48bc5f84e1cd", "8436396b5ecad51a122a2c99ba26e5b4e623bf6e913b0fea0cb6c2c4050f91eb"]
 flake8-isort = ["3c107c405dd6e3dbdcccb2f84549d76d58a07120cd997a0560fab8b84c305f2a", "76d7dd6aec2762c608b442abebb0aaedb72fc75f9a075241a89e4784d8a39900"]
 flake8-polyfill = ["12be6a34ee3ab795b19ca73505e7b55826d5f6ad7230d31b18e106400169b9e9", "e44b087597f6da52ec6393a709e7108b2905317d0c0b744cdca6208e670d8eda"]
+gunicorn = ["aa8e0b40b4157b36a5df5e599f45c9c76d6af43845ba3b3b0efe2c70473c2471", "fa2662097c66f920f53f70621c6c58ca4a3c4d3434205e608e121b5b3b71f4f3"]
 hupper = ["0c0083efcd1b777d7c292e7476e36adaaad187bd0f3cd7b48d8f8ab0abf288a3", "eb3778398658a011c96e620adcd73175f306f880a6d86b2ebb6d2a15a74b6b9b"]
 idna = ["c357b3f628cf53ae2c4c05627ecc484553142ca23264e593d327bcde5e9c3407", "ea8b7f6188e6fa117537c3df7da9fc686d485087abf6ac197f9c46432f7e4a3c"]
 imagesize = ["3f349de3eb99145973fefb7dbe38554414e5c30abd0c8e4b970a7c9d09f3a1d8", "f3832918bc3c66617f92e35f5d70729187676313caa60c187eb0f28b8fe5e3b5"]
