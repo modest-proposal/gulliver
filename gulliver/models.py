@@ -17,6 +17,11 @@
 """Data models of the application."""
 
 
+__version__ = "0.1.0"  # sig: str
+"""Version number of the latest model."""
+
+
+from persistent import Persistent
 from persistent.mapping import PersistentMapping
 from pyramid_zodbconn import get_connection
 
@@ -26,6 +31,29 @@ class Root(PersistentMapping):
 
     __parent__ = None
     __name__ = None
+
+    def __init__(self):
+        """Initialize this root model.
+
+        :sig: () -> None
+        :param metadata: Model metadata.
+        """
+        super().__init__()
+
+        self.metadata = Metadata()
+        """Metadata of this model."""
+
+
+class Metadata(Persistent):
+    """Metadata of the application."""
+
+    def __init__(self):
+        """Initialize this metadata.
+
+        :sig: () -> None
+        """
+        self.version = __version__  # sig: str
+        """Version number of this model."""
 
 
 def get_root(request):
