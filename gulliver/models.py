@@ -36,7 +36,6 @@ class Root(PersistentMapping):
         """Initialize this root model.
 
         :sig: () -> None
-        :param metadata: Model metadata.
         """
         super().__init__()
 
@@ -60,7 +59,7 @@ def get_root(request):
     """Get the root of the application's data model.
 
     :sig: (pyramid.request.Request) -> Root
-    :param db_root: Root of the database connection.
+    :param request: Request to select the root element for.
     :return: Root model.
     """
     connection = get_connection(request)
