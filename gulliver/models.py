@@ -17,17 +17,20 @@
 """Data models of the application."""
 
 
-from newt.db import BTree
+from persistent.mapping import PersistentMapping
 
 
-class Root(BTree):
+class Root(PersistentMapping):
     """Root of the application."""
+
+    __parent__ = None
+    __name__ = None
 
 
 def get_app_root(db_root):
     """Get the root of the application's data model.
 
-    :sig: (persistent.mapping.PersistentMapping) -> Root
+    :sig: (PersistentMapping) -> Root
     :param db_root: Root of the database connection.
     :return: Root model.
     """
