@@ -143,16 +143,16 @@
             
   <div class="section" id="module-gulliver.views">
 <span id="gulliver-views"></span><h1><a class="reference internal" href="#module-gulliver.views" title="gulliver.views"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gulliver.views</span></code></a><a class="headerlink" href="#module-gulliver.views" title="Permalink to this headline">¶</a></h1>
-<p>Handlers for the HTTP requests to the endpoints of the app.</p>
+<p>Handlers for the HTTP requests to the endpoints of the application.</p>
 <dl class="function">
-<dt id="gulliver.views.home">
-<code class="descclassname">gulliver.views.</code><code class="descname">home</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#gulliver.views.home" title="Permalink to this definition">¶</a></dt>
+<dt id="gulliver.views.view_root">
+<code class="descclassname">gulliver.views.</code><code class="descname">view_root</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#gulliver.views.view_root" title="Permalink to this definition">¶</a></dt>
 <dd><p>Respond to a request to the root.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>request</strong> (<em>Request</em>) – Incoming HTTP request.</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>request</strong> (<em>pyramid.request.Request</em>) – Request to respond to.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Dict</td>
 </tr>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>gulliver &mdash; Gulliver 0.1.0 documentation</title>
+  <title>gulliver.models &mdash; Gulliver 0.1.0 documentation</title>
   
 
   
@@ -78,7 +78,7 @@
             
               <!-- Local TOC -->
               <div class="local-toc"><ul>
-<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">gulliver</span></code></a></li>
+<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">gulliver.models</span></code></a></li>
 </ul>
 </div>
             
@@ -124,7 +124,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li><code class="docutils literal notranslate"><span class="pre">gulliver</span></code></li>
+      <li><code class="docutils literal notranslate"><span class="pre">gulliver.models</span></code></li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -141,28 +141,54 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-gulliver">
-<span id="gulliver"></span><h1><a class="reference internal" href="#module-gulliver" title="gulliver"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gulliver</span></code></a><a class="headerlink" href="#module-gulliver" title="Permalink to this headline">¶</a></h1>
-<p>Initialization of the application.</p>
-<dl class="function">
-<dt id="gulliver.create_app">
-<code class="descclassname">gulliver.</code><code class="descname">create_app</code><span class="sig-paren">(</span><em>global_config</em>, <em>**settings</em><span class="sig-paren">)</span><a class="headerlink" href="#gulliver.create_app" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create an application.</p>
+  <div class="section" id="module-gulliver.models">
+<span id="gulliver-models"></span><h1><a class="reference internal" href="#module-gulliver.models" title="gulliver.models"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gulliver.models</span></code></a><a class="headerlink" href="#module-gulliver.models" title="Permalink to this headline">¶</a></h1>
+<p>Data models of the application.</p>
+<dl class="class">
+<dt id="gulliver.models.Metadata">
+<em class="property">class </em><code class="descclassname">gulliver.models.</code><code class="descname">Metadata</code><a class="headerlink" href="#gulliver.models.Metadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metadata of the application.</p>
+<dl class="attribute">
+<dt id="gulliver.models.Metadata.version">
+<code class="descname">version</code><em class="property"> = None</em><a class="headerlink" href="#gulliver.models.Metadata.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Version number of this model.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="gulliver.models.Root">
+<em class="property">class </em><code class="descclassname">gulliver.models.</code><code class="descname">Root</code><a class="headerlink" href="#gulliver.models.Root" title="Permalink to this definition">¶</a></dt>
+<dd><p>Root of the application.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>global_config</strong> – Global configuration settings.</li>
-<li><strong>settings</strong> – Extra settings to pass to the configurator.</li>
-</ul>
-</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>metadata</strong> – Model metadata.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">pyramid.router.Router</p>
-</td>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="gulliver.models.Root.metadata">
+<code class="descname">metadata</code><em class="property"> = None</em><a class="headerlink" href="#gulliver.models.Root.metadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metadata of this model.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="gulliver.models.get_root">
+<code class="descclassname">gulliver.models.</code><code class="descname">get_root</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#gulliver.models.get_root" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the root of the application’s data model.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>db_root</strong> – Root of the database connection.</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Created application.</p>
-</td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#gulliver.models.Root" title="gulliver.models.Root">Root</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Root model.</td>
 </tr>
 </tbody>
 </table>
