@@ -17,13 +17,13 @@
 """Data models of the application."""
 
 
-__version__ = "0.1.0"  # sig: str
-"""Version number of the latest model."""
-
-
 from persistent import Persistent
 from persistent.mapping import PersistentMapping
 from pyramid_zodbconn import get_connection
+
+
+__version__ = "0.1.0"  # sig: str
+"""Version number of the latest model."""
 
 
 class Root(PersistentMapping):
