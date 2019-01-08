@@ -18,6 +18,7 @@
 
 
 from persistent.mapping import PersistentMapping
+from pyramid_zodbconn import get_connection
 
 
 class Root(PersistentMapping):
@@ -27,15 +28,17 @@ class Root(PersistentMapping):
     __name__ = None
 
 
-def get_app_root(db_root):
+def get_root(request):
     """Get the root of the application's data model.
 
-    :sig: (PersistentMapping) -> Root
+    :sig: (pyramid.request.Request) -> Root
     :param db_root: Root of the database connection.
     :return: Root model.
     """
-    app_root = db_root.get("app_root")
+    connection = get_connection(request)
+    db_root = connection.root()
+    app_root = db_root.get("gulliver")
     if app_root is None:
         app_root = Root()
-        db_root["app_root"] = app_root
+        db_root["gulliver"] = app_root
     return app_root
