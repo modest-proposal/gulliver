@@ -20,7 +20,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Gulliver'
-copyright = '2018, H. Turgut Uyar, Barbaros Günay'
+copyright = '2018-2019, H. Turgut Uyar, Barbaros Günay'
 author = 'H. Turgut Uyar, Barbaros Günay'
 
 # The short X.Y version
