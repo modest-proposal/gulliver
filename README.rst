@@ -5,7 +5,7 @@ Install Python 3.6+ and `Poetry <https://poetry.eustace.io/>`_.
 
 Clone the repository::
 
-  git clone https://github.com/modest-proposal/gulliver
+  git clone https://github.com/modest-proposal/gulliver.git
 
 Install::
 
@@ -20,7 +20,7 @@ The application will be available at the address: ``http://localhost:6543/``.
 Docker
 ------
 
-To build the Docker image, use the command::
+To build a Docker image, use the command::
 
   docker build -t gulliver_docker .
 
