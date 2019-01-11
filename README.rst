@@ -26,7 +26,7 @@ To build a Docker image, use the command::
 
 To run the Docker image, use the command::
 
-  docker run -it --rm -p 8000:80 gulliver_docker
+  docker run -it --rm -p 6543:80 gulliver_docker
 
 After that, the application should be available at the address
-``http://localhost:8000``.
+``http://localhost:6543``.
