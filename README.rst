@@ -29,7 +29,7 @@ The recommended way for working with PostgreSQL is via Docker::
   docker pull postgres
 
 To store the data outside the Docker container, create a folder
-and mount it as a volume::
+(say ``$HOME/docker/postgres``) and mount it as a volume::
 
   docker run --rm --name pg-docker -e POSTGRES_PASSWORD=docker -d -p 5432:5432 -v $HOME/docker/volumes/postgres:/var/lib/postgresql/data postgres
 
