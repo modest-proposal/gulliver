@@ -10,7 +10,9 @@ __pycache__
 build
 dist
 .buildinfo
-Data.fs*
+
+volumes/Data.fs*
+volumes/postgres
 
 localhost*.pem
 

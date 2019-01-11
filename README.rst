@@ -21,17 +21,17 @@ PostgreSQL
 ----------
 
 By default, the development setup will store the data in the ``Data.fs``
-file. If you want to use PostgreSQL for data storage, change the
-``zodbconn.uri`` setting in the ``development.ini`` file.
+files under the ``volumes`` folder. If you want to use PostgreSQL for data
+storage, change the ``zodbconn.uri`` setting in the ``development.ini`` file.
 
 The recommended way for working with PostgreSQL is via Docker::
 
   docker pull postgres
 
 To store the data outside the Docker container, create a folder
-(say ``$HOME/docker/volumes/postgres``) and mount it as a volume::
+(say ``volumes/postgres`` in the current folder) and mount it as a volume::
 
-  docker run --rm --name pg-docker -e POSTGRES_PASSWORD=docker -d -p 5432:5432 -v $HOME/docker/volumes/postgres:/var/lib/postgresql/data postgres
+  docker run --rm --name pg-docker -e POSTGRES_PASSWORD=docker -d -p 5432:5432 -v $PWD/volumes/postgres:/var/lib/postgresql/data postgres
 
 After starting the Docker container with the above command and changing
 the ``development.ini`` file as described, the application can be started
