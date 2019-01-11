@@ -42,13 +42,14 @@ as before::
 Docker
 ------
 
-To build a Docker image, use the command::
+To build a Docker image, use the commands::
 
-  docker build -t gulliver_docker .
+  poetry build
+  docker build -t gulliver-docker .
 
 To run the Docker image, use the command::
 
-  docker run -it --rm -p 6543:80 gulliver_docker
+  docker run -it --rm -p 6543:80 gulliver-docker
 
 After that, the application should be available at the address
 ``http://localhost:6543``.
